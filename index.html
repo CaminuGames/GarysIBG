@@ -5,27 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Gary & Bill's: Intergalactic Booty Grab | Caminu Games</title>
-    <meta name="description" content="The sci-fi platformer where corporate accounting meets intergalactic action. Wishlist the game from Caminu Games now!">
+    <meta name="description" content="The sci-fi platformer where corporate accounting meets intergalactic action. Coming soon from Caminu Games!">
     <link rel="icon" href="assets/favicon.png" type="image/png"> 
     
     <meta property="og:title" content="Gary & Bill's: Intergalactic Booty Grab">
-    <meta property="og:description" content="The audit is over. The cosmic embezzlement begins. Wishlist this 2D platformer from Caminu Games.">
+    <meta property="og:description" content="The audit is over. The cosmic embezzlement begins. A 2D platformer from Caminu Games.">
     <meta property="og:image" content="https://caminugames.github.io/garyandbills/assets/social-share-banner.jpg">
     <meta property="og:url" content="https://caminugames.github.io/garyandbills">
     <meta name="twitter:card" content="summary_large_image">
 
     <style>
-        body { font-family: sans-serif; background-color: #0d0d0d; color: #fff; text-align: center; margin: 0; padding: 0; }
-        header { padding: 40px 0; background-color: #1a1a1a; }
+        /* --- Colors inspired by your Level Select screen --- */
+        /* Background: Dark space blue/purple from your screenshot */
+        /* Accent (buttons/highlights): Purple from level select squares */
+        /* Text/secondary elements: Lighter purple/gray from roman numerals */
+        
+        :root {
+            --bg-dark: #120f18; /* Very dark background, like deep space */
+            --bg-medium: #221c2c; /* Slightly lighter for sections */
+            --accent-purple: #a081bd; /* The main purple from your level select boxes */
+            --text-light-purple: #e0d0eb; /* Lighter purple for text */
+            --text-gray: #aaaaaa; /* General body text */
+            --border-color: #55446b; /* Darker purple for separators */
+        }
+
+        body { 
+            font-family: 'Press Start 2P', monospace; /* Pixel font aesthetic */
+            background-color: var(--bg-dark); 
+            color: var(--text-light-purple); 
+            text-align: center; 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.6;
+            font-size: 14px; /* Default font size for pixel art feel */
+        }
+
+        /* --- Pixel Font (add this if you want a true pixel font feel) --- */
+        /* To use this, you'd need to link a font like 'Press Start 2P' from Google Fonts */
+        /* For now, it will default to monospace if not linked. */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+        header { padding: 40px 0; background-color: var(--bg-medium); }
         .logo-container { width: 100%; max-width: 640px; margin: 0 auto; padding: 20px; }
-        /* The GIF is 320x180, setting width: 100% in a container makes it scale up cleanly (4x scale = 1280px) */
         .logo-container img { width: 100%; height: auto; display: block; image-rendering: pixelated; } 
-        h1 { font-size: 2.5em; color: #4CAF50; }
-        a.button { display: inline-block; padding: 15px 30px; margin: 20px 0; background-color: #E91E63; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; }
-        section { padding: 40px 20px; max-width: 800px; margin: 0 auto; text-align: left; line-height: 1.6; }
-        blockquote { border-left: 4px solid #4CAF50; margin: 20px 0; padding-left: 15px; font-style: italic; color: #bbb; }
-        hr { border-color: #333; margin: 30px 0; }
-        footer { padding: 30px 0; background-color: #1a1a1a; font-size: 0.9em; }
+        
+        h1, h2 { 
+            font-size: 2em; /* Adjust for pixel font readability */
+            color: var(--accent-purple); 
+            text-shadow: 2px 2px 0px #000; /* Simple pixel shadow */
+            margin-bottom: 20px;
+        }
+        h2 { font-size: 1.5em; margin-top: 40px; } /* Slightly smaller for section titles */
+
+        p { color: var(--text-light-purple); }
+        p strong { color: #fff; } /* Make strong text stand out */
+
+
+        section { padding: 40px 20px; max-width: 800px; margin: 0 auto; text-align: left; }
+        blockquote { border-left: 4px solid var(--accent-purple); margin: 20px 0; padding-left: 15px; font-style: italic; color: var(--text-gray); }
+        hr { border-color: var(--border-color); margin: 30px 0; }
+        
+        footer { padding: 30px 0; background-color: var(--bg-medium); font-size: 0.8em; }
+        footer a { color: var(--accent-purple); text-decoration: none; margin: 0 5px; }
+        footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -40,10 +83,9 @@
         </div>
         
         <h1>GARY & BILL'S: INTERGALACTIC BOOTY GRAB</h1>
-        <p style="font-style: italic; color: #bbb;">The audit is over. The cosmic embezzlement begins.</p>
+        <p style="font-style: italic; color: var(--text-gray);">The audit is over. The cosmic embezzlement begins.</p>
         
-        <a href="PLACEHOLDER_WISHLIST_LINK" class="button">WISHLIST NOW! (Coming Soon)</a>
-    </header>
+        </header>
 
     <section id="summary">
         <h2>GARY & BILL'S: INTERGALACTIC BOOTY GRAB</h2>
@@ -58,7 +100,7 @@
             Three hundred coins. Ten treacherous levels. And something very, very wrong below the surface.
         </p>
 
-        <p style="font-weight: bold; font-size: 1.2em; color: #4CAF50;">
+        <p style="font-weight: bold; font-size: 1.2em; color: var(--accent-purple); text-align: center;">
             "Welcome to the ass-end of the galaxy, mate."
         </p>
         
@@ -67,13 +109,6 @@
         <p style="text-align: center; font-size: 1.5em; text-transform: uppercase;">
             **Coming to a PC near you!**
         </p>
-    </section>
-
-    <section id="trailer">
-        <h2>Check Out the Trailer</h2>
-        <div style="width: 100%; height: 0; padding-bottom: 56.25%; position: relative; background: #333;">
-            <p style="position: absolute; top: 50%; width: 100%; text-align: center;">[YOUTUBE TRAILER EMBED GOES HERE]</p>
-        </div>
     </section>
 
     <footer>
