@@ -18,10 +18,13 @@
         body { font-family: sans-serif; background-color: #0d0d0d; color: #fff; text-align: center; margin: 0; padding: 0; }
         header { padding: 40px 0; background-color: #1a1a1a; }
         .logo-container { width: 100%; max-width: 640px; margin: 0 auto; padding: 20px; }
-        .logo-container img { width: 100%; height: auto; display: block; image-rendering: pixelated; } /* Ensures clean pixel scaling */
+        /* The GIF is 320x180, setting width: 100% in a container makes it scale up cleanly (4x scale = 1280px) */
+        .logo-container img { width: 100%; height: auto; display: block; image-rendering: pixelated; } 
         h1 { font-size: 2.5em; color: #4CAF50; }
         a.button { display: inline-block; padding: 15px 30px; margin: 20px 0; background-color: #E91E63; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; }
         section { padding: 40px 20px; max-width: 800px; margin: 0 auto; text-align: left; line-height: 1.6; }
+        blockquote { border-left: 4px solid #4CAF50; margin: 20px 0; padding-left: 15px; font-style: italic; color: #bbb; }
+        hr { border-color: #333; margin: 30px 0; }
         footer { padding: 30px 0; background-color: #1a1a1a; font-size: 0.9em; }
     </style>
 </head>
@@ -43,14 +46,28 @@
     </header>
 
     <section id="summary">
-        <h2>The Mission: Clear the Books. Grab the Loot.</h2>
+        <h2>GARY & BILL'S: INTERGALACTIC BOOTY GRAB</h2>
+        
+        <p>In the year 4080, **Gary Gergich** was sent to retrieve what was lost. But he was never truly alone.</p>
+
+        <blockquote>
+            "Twelve years in deep space, and you've befriended a knife. Marvelous." - Bill exclaimed.
+        </blockquote>
+
         <p>
-            Meet **Gary, a disgruntled corporate accountant**, and **Bill, his trusty sidekick penguin**. When a routine audit reveals massive cosmic embezzlement, Gary and Bill decide to cut out the middleman and grab the interplanetary riches themselves.
+            Three hundred coins. Ten treacherous levels. And something very, very wrong below the surface.
         </p>
-        <p>
-            *Intergalactic Booty Grab* is a fast-paced, 2D action-platformer blending classic tight controls with ridiculous sci-fi gadgetry. Jump, slash, and calculate your way through derelict space stations, hostile alien payroll offices, and zero-gravity vaults to secure the biggest payday in the galaxy.
+
+        <p style="font-weight: bold; font-size: 1.2em; color: #4CAF50;">
+            "Welcome to the ass-end of the galaxy, mate."
         </p>
-        </section>
+        
+        <hr>
+
+        <p style="text-align: center; font-size: 1.5em; text-transform: uppercase;">
+            **Coming to a PC near you!**
+        </p>
+    </section>
 
     <section id="trailer">
         <h2>Check Out the Trailer</h2>
