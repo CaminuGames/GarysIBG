@@ -15,6 +15,7 @@
             font-family: 'Maxlock';
             src: url('fonts/Maxlock.ttf') format('truetype');
         }
+
         * {
             margin: 0;
             padding: 0;
@@ -255,8 +256,46 @@
             pointer-events: none;
             z-index: 999;
         }
+
+        /* === Gameplay Video Block === */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 50px auto;
+            border: 3px solid #87ceeb;
+            box-shadow: 0 0 25px rgba(135, 206, 235, 0.4);
+            overflow: hidden;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            display: block;
+            filter: drop-shadow(0 0 15px rgba(255, 105, 180, 0.3));
+        }
+
+        .sound-toggle {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(0,0,0,0.5);
+            border: 2px solid #ff69b4;
+            color: #ff69b4;
+            font-size: 22px;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .sound-toggle:hover {
+            background: #ff69b4;
+            color: #000;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+        }
     </style>
 </head>
+
 <body>
     <div class="stars"></div>
     
@@ -283,6 +322,18 @@
                 <div class="quote-attribution">— Bill</div>
             </div>
         </div>
+
+        <!-- === GAMEPLAY VIDEO INSERTED HERE === -->
+        <div class="video-wrapper">
+            <video id="gameplay1" autoplay muted loop playsinline>
+                <source src="garyandbillgameplay1.webm" type="video/webm">
+                <source src="garyandbillgameplay1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <button class="sound-toggle" onclick="toggleSound('gameplay1')">🔊</button>
+        </div>
+        <!-- === END VIDEO === -->
 
         <div class="stats">
             <div class="stat-box">
@@ -311,5 +362,14 @@
     <footer>
         <p>© 2024 Caminu Games. All coins belong to Gary.</p>
     </footer>
+
+    <!-- === SOUND TOGGLE SCRIPT === -->
+    <script>
+        function toggleSound(id) {
+            const vid = document.getElementById(id);
+            vid.muted = !vid.muted;
+        }
+    </script>
+
 </body>
 </html>
