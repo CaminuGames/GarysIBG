@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // Redirect to lowercase URL
+        const path = window.location.pathname.toLowerCase();
+        if (path !== window.location.pathname) {
+            window.location.href = window.location.protocol + '//' + window.location.host + path + window.location.search;
+        }
+    </script>
+</head>
+</html>
