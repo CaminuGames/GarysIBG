@@ -59,6 +59,10 @@
         header {
             text-align: center;
             padding: 50px 20px 20px;
+            /* Added max-width to header */
+            max-width: 640px; 
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .title {
@@ -108,8 +112,9 @@
             text-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
         }
 
+        /* UPDATED: Max width set to 640px */
         .container {
-            max-width: 800px;
+            max-width: 640px; /* Adjusted to match video width */
             margin: 0 auto;
             padding: 0 20px 60px;
         }
@@ -121,7 +126,7 @@
             padding: 30px;
             margin: 40px 0;
             box-shadow: 0 0 20px rgba(135, 206, 235, 0.2),
-                        inset 0 0 10px rgba(255, 105, 180, 0.1);
+                         inset 0 0 10px rgba(255, 105, 180, 0.1);
         }
 
         .story p {
@@ -192,6 +197,10 @@
             font-size: 0.9rem;
             margin-top: 60px;
             border-top: 1px solid rgba(135, 206, 235, 0.2);
+            /* Added max-width to footer */
+            max-width: 640px; 
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Scanline effect */
@@ -222,7 +231,6 @@
         <h1 class="title">GARY + BILL'S</h1>
         <h2 class="subtitle">Intergalactic Booty Grab</h2>
 
-        <!-- Video under the subtitle -->
         <div class="video-container">
             <video id="gameplay-video" autoplay loop muted playsinline>
                 <source src="garyandbillgameplay1.webm" type="video/webm">
