@@ -72,8 +72,7 @@
             letter-spacing: 2px;
             margin-bottom: 10px;
             color: #f5f5f5;
-            text-shadow: 0 0 30px rgba(255, 105, 180, 0.5), 
-                         0 0 60px rgba(135, 206, 235, 0.3);
+            animation: glowPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
 
         .subtitle {
@@ -98,8 +97,8 @@
             width: 640px;
             max-width: 100%;
             height: auto;
-            border: 3px solid #ff69b4;
-            box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+            border: 3px solid #fff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
             image-rendering: pixelated;
         }
 
@@ -156,10 +155,17 @@
 
         .stat-box {
             background: rgba(135, 206, 235, 0.05);
-            border: 2px solid #ff69b4;
+            border: 2px solid #fff;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 0 15px rgba(255, 105, 180, 0.2);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .stat-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
         }
 
         .stat-number {
@@ -203,7 +209,7 @@
             margin-right: auto;
         }
 
-        /* Scanline effect */
+        /* Scanline effect - intensified */
         body::before {
             content: '';
             position: fixed;
@@ -213,13 +219,129 @@
             height: 100%;
             background: repeating-linear-gradient(
                 0deg,
-                rgba(135, 206, 235, 0.03),
-                rgba(135, 206, 235, 0.03) 1px,
+                rgba(135, 206, 235, 0.1),
+                rgba(135, 206, 235, 0.1) 1px,
                 transparent 1px,
                 transparent 2px
             );
             pointer-events: none;
             z-index: 999;
+        }
+
+        /* Pulsing glow animation for title */
+        @keyframes glowPulse {
+            0% {
+                text-shadow: 0 0 30px rgba(255, 105, 180, 0.5), 
+                             0 0 60px rgba(135, 206, 235, 0.3);
+            }
+            50% {
+                text-shadow: 0 0 50px rgba(255, 105, 180, 0.8), 
+                             0 0 100px rgba(135, 206, 235, 0.6);
+            }
+            100% {
+                text-shadow: 0 0 30px rgba(255, 105, 180, 0.5), 
+                             0 0 60px rgba(135, 206, 235, 0.3);
+            }
+        }
+
+        /* Left to right glow sweep with bounce - heavy frames on edges */
+        @keyframes glowSweep {
+            0% {
+                background: linear-gradient(90deg, 
+                    rgba(255, 105, 180, 0.3) 20px,
+                    rgba(255, 105, 180, 0.05) 60px,
+                    rgba(255, 105, 180, 0.05) 100%);
+            }
+            5% {
+                background: linear-gradient(90deg, 
+                    rgba(255, 105, 180, 0.3) 20px,
+                    rgba(255, 105, 180, 0.05) 60px,
+                    rgba(255, 105, 180, 0.05) 100%);
+            }
+            20% {
+                background: linear-gradient(90deg, 
+                    rgba(255, 105, 180, 0.05) 0%,
+                    rgba(255, 105, 180, 0.3) 35%,
+                    rgba(255, 105, 180, 0.05) 70%,
+                    rgba(255, 105, 180, 0.05) 100%);
+            }
+            30% {
+                background: linear-gradient(90deg, 
+                    rgba(255, 105, 180, 0.05) 0%,
+                    rgba(255, 105, 180, 0.3) 50%,
+                    rgba(255, 105, 180, 0.05) 100%);
+            }
+            40% {
+                background: linear-gradient(90deg, 
+                    rgba(255, 105, 180, 0.05) 0%,
+                    rgba(255, 105, 180, 0.05) 30%,
+                    rgba(255, 105, 180, 0.3) 65%,
+                    rgba(255, 105, 180, 0.05) 100%);
+            }
+            45% {
+                background: linear-gradient(90deg, 
+                    rgba(255, 105, 180, 0.05) 0%,
+                    rgba(255, 105, 180, 0.05) 40%,
+                    rgba(255, 105, 180, 0.3) calc(100% - 60px),
+                    rgba(255, 105, 180, 0.05) calc(100% - 20px));
+            }
+            50% {
+                background: linear-gradient(90deg, 
+                    rgba(255, 105, 180, 0.05) 0%,
+                    rgba(255, 105, 180, 0.05) 40%,
+                    rgba(255, 105, 180, 0.3) calc(100% - 60px),
+                    rgba(255, 105, 180, 0.05) calc(100% - 20px));
+            }
+            55% {
+                background: linear-gradient(90deg, 
+                    rgba(255, 105, 180, 0.05) 0%,
+                    rgba(255, 105, 180, 0.05) 30%,
+                    rgba(255, 105, 180, 0.3) 65%,
+                    rgba(255, 105, 180, 0.05) 100%);
+            }
+            60% {
+                background: linear-gradient(90deg, 
+                    rgba(255, 105, 180, 0.05) 0%,
+                    rgba(255, 105, 180, 0.3) 50%,
+                    rgba(255, 105, 180, 0.05) 100%);
+            }
+            70% {
+                background: linear-gradient(90deg, 
+                    rgba(255, 105, 180, 0.05) 0%,
+                    rgba(255, 105, 180, 0.3) 35%,
+                    rgba(255, 105, 180, 0.05) 70%,
+                    rgba(255, 105, 180, 0.05) 100%);
+            }
+            95% {
+                background: linear-gradient(90deg, 
+                    rgba(255, 105, 180, 0.3) 20px,
+                    rgba(255, 105, 180, 0.05) 60px,
+                    rgba(255, 105, 180, 0.05) 100%);
+            }
+            100% {
+                background: linear-gradient(90deg, 
+                    rgba(255, 105, 180, 0.3) 20px,
+                    rgba(255, 105, 180, 0.05) 60px,
+                    rgba(255, 105, 180, 0.05) 100%);
+            }
+        }
+
+        /* Fade in on scroll */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Stat box hover effect */
+        @keyframes statHover {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
         }
     </style>
 </head>
@@ -284,6 +406,27 @@
             if (!video.muted && video.volume > 0) {
                 message.style.display = 'block';
             }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe story, stats, and cta sections
+        document.querySelectorAll('.story, .stats, .cta-section').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
         });
     </script>
 
