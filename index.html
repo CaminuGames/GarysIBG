@@ -31,7 +31,6 @@
             line-height: 1.6;
         }
 
-        /* Drifting tiled background (updated: 4x scale at 1280x720) */
         .stars {
             position: fixed;
             top: 0;
@@ -40,17 +39,13 @@
             height: 100%;
             background-image: url('background.png');
             background-repeat: repeat;
-
-            /* pixel-perfect scale-up */
             image-rendering: pixelated;
             background-size: 1280px 720px;
-
             animation: drift 20s linear infinite;
             z-index: -1;
             opacity: 1;
         }
 
-        /* Faster drift */
         @keyframes drift {
             from { background-position: 0 0; }
             to { background-position: -600px 600px; }
@@ -59,8 +54,7 @@
         header {
             text-align: center;
             padding: 50px 20px 20px;
-            /* Added max-width to header */
-            max-width: 640px; 
+            max-width: 640px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -87,7 +81,6 @@
             text-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
         }
 
-        /* Video updated (640px width, pixelized) */
         .video-container {
             text-align: center;
             margin-top: 10px;
@@ -111,9 +104,8 @@
             text-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
         }
 
-        /* UPDATED: Max width set to 640px */
         .container {
-            max-width: 640px; /* Adjusted to match video width */
+            max-width: 640px;
             margin: 0 auto;
             padding: 0 20px 60px;
         }
@@ -203,13 +195,11 @@
             font-size: 0.9rem;
             margin-top: 60px;
             border-top: 1px solid rgba(135, 206, 235, 0.2);
-            /* Added max-width to footer */
-            max-width: 640px; 
+            max-width: 640px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        /* Scanline effect - intensified */
         body::before {
             content: '';
             position: fixed;
@@ -228,7 +218,6 @@
             z-index: 999;
         }
 
-        /* Pulsing glow animation for title */
         @keyframes glowPulse {
             0% {
                 text-shadow: 0 0 30px rgba(255, 105, 180, 0.5), 
@@ -244,104 +233,9 @@
             }
         }
 
-        /* Left to right glow sweep with bounce - heavy frames on edges */
-        @keyframes glowSweep {
-            0% {
-                background: linear-gradient(90deg, 
-                    rgba(255, 105, 180, 0.3) 20px,
-                    rgba(255, 105, 180, 0.05) 60px,
-                    rgba(255, 105, 180, 0.05) 100%);
-            }
-            5% {
-                background: linear-gradient(90deg, 
-                    rgba(255, 105, 180, 0.3) 20px,
-                    rgba(255, 105, 180, 0.05) 60px,
-                    rgba(255, 105, 180, 0.05) 100%);
-            }
-            20% {
-                background: linear-gradient(90deg, 
-                    rgba(255, 105, 180, 0.05) 0%,
-                    rgba(255, 105, 180, 0.3) 35%,
-                    rgba(255, 105, 180, 0.05) 70%,
-                    rgba(255, 105, 180, 0.05) 100%);
-            }
-            30% {
-                background: linear-gradient(90deg, 
-                    rgba(255, 105, 180, 0.05) 0%,
-                    rgba(255, 105, 180, 0.3) 50%,
-                    rgba(255, 105, 180, 0.05) 100%);
-            }
-            40% {
-                background: linear-gradient(90deg, 
-                    rgba(255, 105, 180, 0.05) 0%,
-                    rgba(255, 105, 180, 0.05) 30%,
-                    rgba(255, 105, 180, 0.3) 65%,
-                    rgba(255, 105, 180, 0.05) 100%);
-            }
-            45% {
-                background: linear-gradient(90deg, 
-                    rgba(255, 105, 180, 0.05) 0%,
-                    rgba(255, 105, 180, 0.05) 40%,
-                    rgba(255, 105, 180, 0.3) calc(100% - 60px),
-                    rgba(255, 105, 180, 0.05) calc(100% - 20px));
-            }
-            50% {
-                background: linear-gradient(90deg, 
-                    rgba(255, 105, 180, 0.05) 0%,
-                    rgba(255, 105, 180, 0.05) 40%,
-                    rgba(255, 105, 180, 0.3) calc(100% - 60px),
-                    rgba(255, 105, 180, 0.05) calc(100% - 20px));
-            }
-            55% {
-                background: linear-gradient(90deg, 
-                    rgba(255, 105, 180, 0.05) 0%,
-                    rgba(255, 105, 180, 0.05) 30%,
-                    rgba(255, 105, 180, 0.3) 65%,
-                    rgba(255, 105, 180, 0.05) 100%);
-            }
-            60% {
-                background: linear-gradient(90deg, 
-                    rgba(255, 105, 180, 0.05) 0%,
-                    rgba(255, 105, 180, 0.3) 50%,
-                    rgba(255, 105, 180, 0.05) 100%);
-            }
-            70% {
-                background: linear-gradient(90deg, 
-                    rgba(255, 105, 180, 0.05) 0%,
-                    rgba(255, 105, 180, 0.3) 35%,
-                    rgba(255, 105, 180, 0.05) 70%,
-                    rgba(255, 105, 180, 0.05) 100%);
-            }
-            95% {
-                background: linear-gradient(90deg, 
-                    rgba(255, 105, 180, 0.3) 20px,
-                    rgba(255, 105, 180, 0.05) 60px,
-                    rgba(255, 105, 180, 0.05) 100%);
-            }
-            100% {
-                background: linear-gradient(90deg, 
-                    rgba(255, 105, 180, 0.3) 20px,
-                    rgba(255, 105, 180, 0.05) 60px,
-                    rgba(255, 105, 180, 0.05) 100%);
-            }
-        }
-
-        /* Fade in on scroll */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Stat box hover effect */
-        @keyframes statHover {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.05); }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -367,7 +261,7 @@
     <div class="container">
         <div class="story">
             <p><strong>The audit is over. The cosmic embezzlement begins.</strong></p>
-            <p>In the year 4080, Gary Gergich was sent to retrieve what was lost. A fortune in gold coins, hidden deep within an abandoned alien facility. But he was never truly alone.</p>
+            <p>In the year 4080, Gary Merwitch was sent to retrieve what was lost. A fortune in gold coins, hidden deep within an abandoned alien facility. But he was never truly alone.</p>
 
             <div class="quote">
                 "Twelve years in deep space, and I've become your best friend. A <em>knife</em>. Marvelous."
@@ -408,7 +302,6 @@
             }
         });
 
-        // Intersection Observer for scroll animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -423,7 +316,6 @@
             });
         }, observerOptions);
 
-        // Observe story, stats, and cta sections
         document.querySelectorAll('.story, .stats, .cta-section').forEach(el => {
             el.style.opacity = '0';
             observer.observe(el);
@@ -432,3 +324,4 @@
 
 </body>
 </html>
+
