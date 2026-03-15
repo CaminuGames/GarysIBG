@@ -7,10 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <style>
+        /* Updated Color Palette based on logo_0.png */
         :root {
-            --purple-rain: #4B0082;
-            --gold: #FFD700;
-            --white: #FFFFFF;
+            --title-blue: #70CFFF; /* The CYNICAL BLUE from your title accents */
+            --off-white: #F5F5F5;  /* From the LIGHTEST BLUE of your logo */
+            --deep-purple: #9D75CB; /* The main PURPLE of your logo */
+            --black: #000000;
             --pixel-font: 'Press Start 2P', cursive;
         }
 
@@ -21,15 +23,15 @@
         }
 
         body {
-            background: #000;
-            color: var(--white);
+            background: var(--black);
+            color: var(--off-white);
             font-family: var(--pixel-font);
             overflow-x: hidden;
             line-height: 1.8;
             font-size: 12px;
         }
 
-        /* Drifting Star Background */
+        /* Drifting Star Background - Toned down slightly */
         .stars {
             position: fixed;
             top: 0;
@@ -42,7 +44,7 @@
             background-size: 1280px 720px;
             animation: drift 20s linear infinite;
             z-index: -1;
-            opacity: 0.5;
+            opacity: 0.4;
         }
 
         @keyframes drift {
@@ -50,7 +52,7 @@
             to { background-position: -600px 600px; }
         }
 
-        /* Purple Scanlines */
+        /* Purple Scanlines - Re-aligned color */
         body::before {
             content: '';
             position: fixed;
@@ -60,8 +62,8 @@
             height: 100%;
             background: repeating-linear-gradient(
                 0deg,
-                rgba(75, 0, 130, 0.1),
-                rgba(75, 0, 130, 0.1) 1px,
+                rgba(157, 117, 203, 0.1), /* Deep Purple glow */
+                rgba(157, 117, 203, 0.1) 1px,
                 transparent 1px,
                 transparent 3px
             );
@@ -86,7 +88,7 @@
             width: 640px;
             height: auto;
             image-rendering: pixelated; 
-            filter: drop-shadow(0 0 15px var(--purple-rain));
+            filter: drop-shadow(0 0 15px var(--deep-purple)); /* Glow aligns with main purple */
             animation: float 4s ease-in-out infinite;
         }
 
@@ -104,18 +106,18 @@
             width: 640px;
             max-width: 100%;
             height: auto;
-            border: 4px solid var(--gold);
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+            border: 4px solid var(--title-blue); /* Updated border to Blue */
+            box-shadow: 0 0 25px rgba(112, 207, 255, 0.4);
             image-rendering: pixelated;
         }
 
         #unmute-message {
             display: none;
             text-align: center;
-            color: var(--gold);
+            color: var(--title-blue); /* Message Blue */
             font-size: 10px;
             margin-top: 15px;
-            text-shadow: 0 0 10px var(--gold);
+            text-shadow: 0 0 10px var(--title-blue);
         }
 
         .container {
@@ -125,23 +127,25 @@
         }
 
         .story {
-            background: rgba(75, 0, 130, 0.2);
-            border: 2px solid var(--purple-rain);
-            border-left: 6px solid var(--gold);
+            background: rgba(157, 117, 203, 0.1); /* Subtle purple background tint */
+            border: 2px solid var(--deep-purple);
+            border-left: 6px solid var(--title-blue); /* The new blue accent */
             padding: 30px;
             margin: 50px 0;
+            box-shadow: 0 0 20px rgba(157, 117, 203, 0.2);
         }
 
         .story p { margin-bottom: 25px; font-size: 11px; }
-        .story p strong { color: var(--gold); }
+        .story p strong { color: var(--title-blue); } /* Blue for emphasis */
 
         .highlight-box {
-            color: var(--gold);
-            border: 1px dashed var(--purple-rain);
+            color: var(--title-blue); /* Gold accents become Blue */
+            border: 1px dashed var(--deep-purple);
             padding: 15px;
             font-size: 10px;
             text-align: center;
             margin-bottom: 25px;
+            text-shadow: 0 0 5px var(--title-blue);
         }
 
         .stats {
@@ -153,25 +157,26 @@
 
         .stat-box {
             background: rgba(0, 0, 0, 0.6);
-            border: 2px solid var(--purple-rain);
+            border: 2px solid var(--deep-purple);
             padding: 20px;
             text-align: center;
             transition: border-color 0.3s ease;
         }
 
         .stat-box:hover {
-            border-color: var(--gold);
+            border-color: var(--title-blue); /* Hover Blue */
         }
 
         .stat-number {
             font-size: 24px;
-            color: var(--gold);
+            color: var(--title-blue); /* Number Blue */
             display: block;
             margin-bottom: 10px;
+            text-shadow: 0 0 10px var(--title-blue);
         }
 
         .stat-label {
-            color: var(--white);
+            color: var(--off-white);
             font-size: 8px;
             text-transform: uppercase;
         }
@@ -183,17 +188,17 @@
 
         .cta-text {
             font-size: 16px;
-            color: var(--gold);
+            color: var(--title-blue); /* CTA Blue */
             letter-spacing: 2px;
-            text-shadow: 0 0 10px var(--purple-rain);
+            text-shadow: 0 0 10px var(--title-blue);
         }
 
         footer {
             text-align: center;
             padding: 40px 20px;
-            color: var(--purple-rain);
+            color: var(--deep-purple); /* Footer lines now Deep Purple */
             font-size: 8px;
-            border-top: 2px solid rgba(75, 0, 130, 0.3);
+            border-top: 2px solid rgba(157, 117, 203, 0.3);
             max-width: 640px;
             margin: 60px auto 0;
         }
@@ -222,9 +227,9 @@
 
     <div class="container">
         <div class="story">
-            <p><strong>The Storm is Coming. The Retrieval Begins.</strong></p>
+            <p><strong>The Retrieval Begins.</strong> p>
             
-            <p>Gary's: Intergalactic Booty Grab is a 16-bit sci-fi platformer where a wisecracking cargo retrieval specialist starts running into someone he never expected to see again... in a galaxy where quantum storms can drag anything out of anywhere.</p>
+            <p>Gary's: Intergalactic Booty Grab is a 16-bit sci-fi platformer where a wisecracking cargo retrieval specialist starts running into strange anomalies below the surface of an abandoned facility.</p>
 
             <div class="highlight-box">
                 24 TREACHEROUS LEVELS. ONE RELENTLESS MISSION.
