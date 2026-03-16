@@ -7,11 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <style>
-        /* Updated Color Palette based on logo_0.png */
         :root {
-            --title-blue: #70CFFF; /* The CYNICAL BLUE from your title accents */
-            --off-white: #F5F5F5;  /* From the LIGHTEST BLUE of your logo */
-            --deep-purple: #9D75CB; /* The main PURPLE of your logo */
+            --title-blue: #70CFFF;
+            --off-white: #F5F5F5;
+            --deep-purple: #9D75CB;
             --black: #000000;
             --pixel-font: 'Press Start 2P', cursive;
         }
@@ -31,7 +30,6 @@
             font-size: 12px;
         }
 
-        /* Drifting Star Background - Toned down slightly */
         .stars {
             position: fixed;
             top: 0;
@@ -52,7 +50,6 @@
             to { background-position: -600px 600px; }
         }
 
-        /* Purple Scanlines - Re-aligned color */
         body::before {
             content: '';
             position: fixed;
@@ -62,7 +59,7 @@
             height: 100%;
             background: repeating-linear-gradient(
                 0deg,
-                rgba(157, 117, 203, 0.1), /* Deep Purple glow */
+                rgba(157, 117, 203, 0.1),
                 rgba(157, 117, 203, 0.1) 1px,
                 transparent 1px,
                 transparent 3px
@@ -88,7 +85,7 @@
             width: 640px;
             height: auto;
             image-rendering: pixelated; 
-            filter: drop-shadow(0 0 15px var(--deep-purple)); /* Glow aligns with main purple */
+            filter: drop-shadow(0 0 15px var(--deep-purple));
             animation: float 4s ease-in-out infinite;
         }
 
@@ -106,7 +103,7 @@
             width: 640px;
             max-width: 100%;
             height: auto;
-            border: 4px solid var(--title-blue); /* Updated border to Blue */
+            border: 4px solid var(--title-blue);
             box-shadow: 0 0 25px rgba(112, 207, 255, 0.4);
             image-rendering: pixelated;
         }
@@ -114,7 +111,7 @@
         #unmute-message {
             display: none;
             text-align: center;
-            color: var(--title-blue); /* Message Blue */
+            color: var(--title-blue);
             font-size: 10px;
             margin-top: 15px;
             text-shadow: 0 0 10px var(--title-blue);
@@ -127,19 +124,19 @@
         }
 
         .story {
-            background: rgba(157, 117, 203, 0.1); /* Subtle purple background tint */
+            background: rgba(157, 117, 203, 0.1);
             border: 2px solid var(--deep-purple);
-            border-left: 6px solid var(--title-blue); /* The new blue accent */
+            border-left: 6px solid var(--title-blue);
             padding: 30px;
             margin: 50px 0;
             box-shadow: 0 0 20px rgba(157, 117, 203, 0.2);
         }
 
         .story p { margin-bottom: 25px; font-size: 11px; }
-        .story p strong { color: var(--title-blue); } /* Blue for emphasis */
+        .story p strong { color: var(--title-blue); }
 
         .highlight-box {
-            color: var(--title-blue); /* Gold accents become Blue */
+            color: var(--title-blue);
             border: 1px dashed var(--deep-purple);
             padding: 15px;
             font-size: 10px;
@@ -164,12 +161,12 @@
         }
 
         .stat-box:hover {
-            border-color: var(--title-blue); /* Hover Blue */
+            border-color: var(--title-blue);
         }
 
         .stat-number {
             font-size: 24px;
-            color: var(--title-blue); /* Number Blue */
+            color: var(--title-blue);
             display: block;
             margin-bottom: 10px;
             text-shadow: 0 0 10px var(--title-blue);
@@ -188,7 +185,7 @@
 
         .cta-text {
             font-size: 16px;
-            color: var(--title-blue); /* CTA Blue */
+            color: var(--title-blue);
             letter-spacing: 2px;
             text-shadow: 0 0 10px var(--title-blue);
         }
@@ -196,7 +193,7 @@
         footer {
             text-align: center;
             padding: 40px 20px;
-            color: var(--deep-purple); /* Footer lines now Deep Purple */
+            color: var(--deep-purple);
             font-size: 8px;
             border-top: 2px solid rgba(157, 117, 203, 0.3);
             max-width: 640px;
@@ -235,7 +232,7 @@
                 24 TREACHEROUS LEVELS. ONE RELENTLESS MISSION.
             </div>
 
-            <p>It plays like a love letter to classic platformers, but feels like something else entirely by the time you're done. Navigate collapsing alien facilities, collect lost fortunes, and survive the anomalies below the surface.</p>
+            <p>It plays like a love letter to classic platformers, but feels like something else entirely by the time you're done. Navigate collapsing alien facilities, collect lost fortunes, and survive the anomalies of the Storm.</p>
         </div>
 
         <div class="stats">
